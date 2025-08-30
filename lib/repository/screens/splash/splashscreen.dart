@@ -12,13 +12,15 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.scaffoldBackground,
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Center(
-            child: UiHelper.CustomImage(img: "splash.png"),
-          ),
-        ]
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Center(
+              child: UiHelper.CustomImage(img: "splash.png"),
+            ),
+          ]
+        ),
       )
     );
   }
