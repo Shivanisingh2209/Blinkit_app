@@ -45,7 +45,11 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
             label: "Print",
           ),
         ],
-        type: BottomNavigationBarType.fixed,
+        type: BottomNavigationBarType.fixed,currentIndex: currentIndex,onTap: (index){
+          setState(() {
+            currentIndex = index;
+          });
+        },
       ),
     );
   }

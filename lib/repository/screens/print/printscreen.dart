@@ -7,7 +7,7 @@ class PrintScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Center(
-          child: Text("Home Screen"),
+          child: Text("print Screen"),
         ),
     );
   }
