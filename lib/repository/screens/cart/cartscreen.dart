@@ -19,16 +19,19 @@ class CartScreen extends StatelessWidget {
                 Row(
                   children: [
                     SizedBox(width: 10,),
-                    UiHelper.CustomText(text: "Blinkit in", color: Color(0XFF000000), fontsize: 12, fontweight: FontWeight.bold, fontfamily: "bold"),
+                    UiHelper.CustomText(text: "Blinkit in", color: Color(0XFF000000), fontsize: 14, fontweight: FontWeight.bold, fontfamily: "bold"),
                 ],),
                 Row(
                   children: [
                     SizedBox(width: 10,),
                     UiHelper.CustomText(text: "16 minutes", color: Color(0XFF000000), fontsize: 20, fontweight: FontWeight.bold, fontfamily: "bold"),
-                  ],
-                )
-              ],
-            )
+                  ],),
+                Row(
+                  children: [
+                    SizedBox(width: 10,),
+                    UiHelper.CustomText(text: "HOME", color: Color(0XFF000000), fontweight: FontWeight.bold, fontsize: 14, fontfamily: "bold")
+                ],)
+              ],)
           ),
         ],)
     );
