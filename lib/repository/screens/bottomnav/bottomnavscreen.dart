@@ -45,6 +45,7 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
             label: "Print",
           ),
         ],
+        type: BottomNavigationBarType.fixed,
       ),
     );
   }
