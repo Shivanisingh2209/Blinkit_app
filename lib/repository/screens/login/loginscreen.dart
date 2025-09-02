@@ -1,3 +1,4 @@
+import 'package:blinkit_app/repository/screens/bottomnav/bottomnavscreen.dart';
 import 'package:blinkit_app/repository/widgets/uihelper.dart';
 import 'package:flutter/material.dart';
 
@@ -58,7 +59,14 @@ class LoginScreen extends StatelessWidget {
                           height: 48,
                           width: 295,
                           child: ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => BottomNavScreen(),
+                                ),
+                              );
+                            },
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Color(0XFFE23744),
                               shape: RoundedRectangleBorder(
@@ -83,14 +91,21 @@ class LoginScreen extends StatelessWidget {
                         ),
                         SizedBox(height: 4),
                         UiHelper.CustomText(
-                          text: "Access your saved addresses from Zomato automatically!",
+                          text:
+                              "Access your saved addresses from Zomato automatically!",
                           color: Color(0XFF9C9C9C),
                           fontweight: FontWeight.normal,
                           fontsize: 10,
                           fontfamily: "regular",
                         ),
                         SizedBox(height: 4),
-                        UiHelper.CustomText(text: "or login with phone number", color: Color(0XFF269237), fontweight: FontWeight.normal, fontsize: 14, fontfamily: "regular",)
+                        UiHelper.CustomText(
+                          text: "or login with phone number",
+                          color: Color(0XFF269237),
+                          fontweight: FontWeight.normal,
+                          fontsize: 14,
+                          fontfamily: "regular",
+                        ),
                       ],
                     ),
                   ),
