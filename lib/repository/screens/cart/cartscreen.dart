@@ -6,9 +6,20 @@ class CartScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Center(
-          child: Text("Cart Screen"),
-        ),
+        body: Column(children: [
+          SizedBox(height: 30),
+          Container(
+            height: 160,
+            width: double.infinity,
+            color: Color(0XFFF7CB45),
+            child: Column(
+              children: [
+                SizedBox(height: 10),
+                UiHelper.CustomText(
+              ],
+            )
+          ),
+        ],)
     );
   }
 }
