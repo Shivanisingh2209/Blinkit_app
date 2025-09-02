@@ -1,3 +1,4 @@
+import 'package:blinkit_app/repository/widgets/uihelper.dart';
 import 'package:flutter/material.dart';
 
 class CartScreen extends StatelessWidget {
@@ -14,8 +15,10 @@ class CartScreen extends StatelessWidget {
             color: Color(0XFFF7CB45),
             child: Column(
               children: [
-                SizedBox(height: 10),
-                UiHelper.CustomText(
+                Row(
+                  children: [
+                  UiHelper.CustomText(text: "Blinkit in", color: Color(0XFF000000), fontsize: 12, fontweight: FontWeight.bold, fontfamily: "bold"),
+                ],),
               ],
             )
           ),
