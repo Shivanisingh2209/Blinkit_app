@@ -22,11 +22,30 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(items: [
-        BottomNavigationBarItem(icon: UiHelper.CustomImage(img: "home 1.png"), label: "Home"),
-        BottomNavigationBarItem(icon: Icon(Icons.category), label: "Category"),
-        BottomNavigationBarItem(icon: Icon(Icons.shopping_cart), label: "Cart"),
-      ]),
+      body: IndexedStack(
+        index: currentIndex,
+          children: pages,
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(
+            icon: UiHelper.CustomImage(img: "home 1.png"),
+            label: "Home",
+          ),
+          BottomNavigationBarItem(
+            icon: UiHelper.CustomImage(img: "shopping-bag 1.png"),
+            label: "Cart",
+          ),
+          BottomNavigationBarItem(
+            icon: UiHelper.CustomImage(img: "category 1.png"),
+            label: "Category",
+          ),
+          BottomNavigationBarItem(
+            icon: UiHelper.CustomImage(img: "printer 1.png"),
+            label: "Print",
+          ),
+        ],
+      ),
     );
   }
 }
