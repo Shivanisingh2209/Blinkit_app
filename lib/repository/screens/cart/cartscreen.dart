@@ -29,7 +29,8 @@ class CartScreen extends StatelessWidget {
                 Row(
                   children: [
                     SizedBox(width: 10,),
-                    UiHelper.CustomText(text: "HOME", color: Color(0XFF000000), fontweight: FontWeight.bold, fontsize: 14, fontfamily: "bold")
+                    UiHelper.CustomText(text: "HOME", color: Color(0XFF000000), fontweight: FontWeight.bold, fontsize: 12, fontfamily: "bold"),
+                    UiHelper.CustomText(text: "- Shivani Singh, Lahartara, Varanasi", color: Color(0XFF000000), fontweight: FontWeight.normal, fontsize: 12, fontfamily: "regular"),
                 ],)
               ],)
           ),
