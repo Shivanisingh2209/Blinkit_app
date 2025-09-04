@@ -2,7 +2,7 @@ import 'package:blinkit_app/repository/widgets/uihelper.dart';
 import 'package:flutter/material.dart';
 
 class CartScreen extends StatelessWidget {
-  const CartScreen({super.key});
+  TextEditingController searchController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -62,18 +62,22 @@ class CartScreen extends StatelessWidget {
                         ),
                       ],
                     ),
+                    SizedBox(height: 20),
+                    UiHelper.CustomTextField(
+                      controller: searchController, hintText: ''
+                    ),
                   ],
                 ),
               ),
               Positioned(
                 right: 10,
-                bottom: 70,
+                bottom: 80,
                 child: CircleAvatar(
                   radius: 20,
                   backgroundColor: Colors.white,
                   child: Icon(Icons.person, color: Colors.black, size: 20),
                 ),
-              )
+              ),
             ],
           ),
         ],
