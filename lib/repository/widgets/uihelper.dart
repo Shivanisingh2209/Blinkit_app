@@ -25,7 +25,7 @@ class UiHelper {
 
   static CustomTextField({required TextEditingController controller, required String hintText}){
     return Container(
-      height: 37,
+      height: 40,
       width: 346,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),

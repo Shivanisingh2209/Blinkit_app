@@ -13,12 +13,12 @@ class CartScreen extends StatelessWidget {
           Stack(
             children: [
               Container(
-                height: 200,
+                height: 190,
                 width: double.infinity,
                 color: Color(0XFFF7CB45),
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    SizedBox(height: 30),
                     Row(
                       children: [
                         SizedBox(width: 10),
@@ -62,24 +62,32 @@ class CartScreen extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(height: 20),
-                    UiHelper.CustomTextField(
-                      controller: searchController, hintText: ''
-                    ),
                   ],
                 ),
               ),
               Positioned(
                 right: 10,
-                bottom: 80,
+                bottom: 100,
                 child: CircleAvatar(
                   radius: 20,
                   backgroundColor: Colors.white,
                   child: Icon(Icons.person, color: Colors.black, size: 20),
                 ),
               ),
+              Positioned(
+                left: 20,
+                bottom: 30,
+                child: UiHelper.CustomTextField(
+                  controller: searchController, hintText: ''),
+              ),
             ],
           ),
+          SizedBox(height: 20,),
+          UiHelper.CustomImage(img: "shopping-cart (1) 1.png"),
+          SizedBox(height: 10,),
+          UiHelper.CustomText(text: "Reordering will be easy", color: Color(0XFF000000), fontweight: FontWeight.bold, fontsize: 16, fontfamily: "bold"),
+          UiHelper.CustomText(text: "Items you order will show up here so you can buy", color: Color(0XFF000000), fontweight: FontWeight.normal, fontsize: 12, fontfamily: "regular"),
+          UiHelper.CustomText(text: "them again easily", color: Color(0XFF000000), fontweight: FontWeight.normal, fontsize: 12, fontfamily: "regular"),
         ],
       ),
     );
