@@ -128,25 +128,28 @@ class CartScreen extends StatelessWidget {
               Stack(
                 children: [
                   UiHelper.CustomImage(img: "milk-img.png"),
-                  Padding(padding: EdgeInsets.only(top: 95, left: 65),
+                  Padding(
+                    padding: EdgeInsets.only(top: 95, left: 65),
                     child: UiHelper.CustomButton(() {}),
                   ),
                 ],
               ),
-              SizedBox(width: 20),
+              SizedBox(width: 15),
               Stack(
                 children: [
                   UiHelper.CustomImage(img: "potato.png"),
-                  Padding(padding: EdgeInsets.only(top: 95, left: 65),
+                  Padding(
+                    padding: EdgeInsets.only(top: 95, left: 65),
                     child: UiHelper.CustomButton(() {}),
                   ),
                 ],
               ),
-              SizedBox(width: 20),
+              SizedBox(width: 15),
               Stack(
                 children: [
                   UiHelper.CustomImage(img: "tomato.png"),
-                  Padding(padding: EdgeInsets.only(top: 95, left: 65),
+                  Padding(
+                    padding: EdgeInsets.only(top: 95, left: 65),
                     child: UiHelper.CustomButton(() {}),
                   ),
                 ],
