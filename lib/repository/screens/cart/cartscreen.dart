@@ -21,7 +21,7 @@ class CartScreen extends StatelessWidget {
                     SizedBox(height: 40),
                     Row(
                       children: [
-                        SizedBox(width: 10),
+                        SizedBox(width: 12),
                         UiHelper.CustomText(
                           text: "Blinkit in",
                           color: Color(0XFF000000),
