@@ -4,11 +4,19 @@ import 'package:flutter/material.dart';
 class CategoryScreen extends StatelessWidget {
   TextEditingController searchController = TextEditingController();
   var grocerykitchen = [
-    {"img": "vegies.png", "text": "Vegetable & \nFruits"},
-    {"img": "atta.png", "text": "Atta, Dal & \nRice"},
-    {"img": "oil.png", "text": "Oil, Ghee & \nMasala"},
-    {"img": "bread.png", "text": "Dairy, bread & \nMilk"},
-    {"img": "bourbon.png", "text": "Biscuits & \nBakery"},
+    {"img": "vegies.png", "text": "Vegetable & \n Fruits"},
+    {"img": "atta.png", "text": "Atta, Dal & \n Rice"},
+    {"img": "oil.png", "text": "Oil, Ghee & \n Masala"},
+    {"img": "bread.png", "text": "Dairy, bread & \n Milk"},
+    {"img": "bourbon.png", "text": "Biscuits & \n Bakery"},
+  ];
+
+  var secondgrocerykitchen = [
+    {"img": "cereals.png", "text": "Dry Fruits & \n Cereals"},
+    {"img": "appliances.png", "text": "Kitchen & \n Appliances"},
+    {"img": "tea.png", "text": "Tea & \n Coffees"},
+    {"img": "icecream.png", "text": "Ice Creams & \n much more"},
+    {"img": "maggie.png", "text": "Noodles & \n Packet Food"},
   ];
 
   @override
@@ -113,7 +121,7 @@ class CategoryScreen extends StatelessWidget {
                   return Column(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.all(4.0),
+                        padding: const EdgeInsets.all(5.0),
                         child: Container(
                           height: 78,
                           width: 71,
