@@ -2,8 +2,6 @@ import 'package:blinkit_app/repository/widgets/uihelper.dart';
 import 'package:flutter/material.dart';
 
 class PrintScreen extends StatelessWidget {
-  PrintScreen({super.key});
-
   TextEditingController searchController = TextEditingController();
 
   @override
@@ -85,6 +83,14 @@ class PrintScreen extends StatelessWidget {
                 ),
               ),
             ],
+          ),
+          SizedBox(height: 30),
+          UiHelper.CustomText(
+            text: "Print Store",
+            color: Colors.black,
+            fontweight: FontWeight.bold,
+            fontsize: 32,
+            fontfamily: "bold",
           ),
         ],
       ),
