@@ -6,10 +6,23 @@ class CategoryScreen extends StatelessWidget {
   var grocerykitchen = [
     {
       "img": "grocery.png",
+      "text": "Vegetable & \nFruits",
+    },
+    {
       "img": "atta.png",
+      "text": "Atta, Dal & \nRice",
+    },
+    {
       "img": "oil.png",
+      "text": "Oil, Ghee & \nMasala",
+    },
+    {
       "img": "bread.png",
-      "img": "bourbon.png"
+      "text": "Dairy, bread & \nMilk",
+    },
+    {
+      "img": "bourbon.png",
+      "text": "Biscuit & \nBakery",
     }
   ];
 
