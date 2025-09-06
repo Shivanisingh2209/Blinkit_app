@@ -9,16 +9,16 @@ class CartScreen extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          SizedBox(height: 30),
+          SizedBox(height: 40),
           Stack(
             children: [
               Container(
-                height: 190,
+                height: 200,
                 width: double.infinity,
                 color: Color(0XFFF7CB45),
                 child: Column(
                   children: [
-                    SizedBox(height: 30),
+                    SizedBox(height: 40),
                     Row(
                       children: [
                         SizedBox(width: 10),
@@ -84,9 +84,9 @@ class CartScreen extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(height: 20),
+          SizedBox(height: 30),
           UiHelper.CustomImage(img: "shopping-cart (1) 1.png"),
-          SizedBox(height: 10),
+          SizedBox(height: 20),
           UiHelper.CustomText(
             text: "Reordering will be easy",
             color: Color(0XFF000000),
@@ -121,10 +121,10 @@ class CartScreen extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(height: 10),
+          SizedBox(height: 20),
           Row(
             children: [
-              SizedBox(width: 20),
+              SizedBox(width: 25),
               Stack(
                 children: [
                   UiHelper.CustomImage(img: "milk-img.png"),
@@ -134,7 +134,7 @@ class CartScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(width: 15),
+              SizedBox(width: 25),
               Stack(
                 children: [
                   UiHelper.CustomImage(img: "potato.png"),
@@ -144,7 +144,7 @@ class CartScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(width: 15),
+              SizedBox(width: 25),
               Stack(
                 children: [
                   UiHelper.CustomImage(img: "tomato.png"),

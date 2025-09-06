@@ -5,7 +5,7 @@ class CategoryScreen extends StatelessWidget {
   TextEditingController searchController = TextEditingController();
   var grocerykitchen = [
     {
-      "img": "grocery.png",
+      "img": "vegies.png",
       "text": "Vegetable & \nFruits",
     },
     {
@@ -35,15 +35,15 @@ class CategoryScreen extends StatelessWidget {
           Stack(
             children: [
               Container(
-                height: 190,
+                height: 200,
                 width: double.infinity,
                 color: Color(0XFFF7CB45),
                 child: Column(
                   children: [
-                    SizedBox(height: 30),
+                    SizedBox(height: 40),
                     Row(
                       children: [
-                        SizedBox(width: 10),
+                        SizedBox(width: 12),
                         UiHelper.CustomText(
                           text: "Blinkit in",
                           color: Color(0XFF000000),
@@ -120,17 +120,19 @@ class CategoryScreen extends StatelessWidget {
             ],
           ),
           SizedBox(height: 20),
-          ListView.builder(itemBuilder: (context,index){
-            return Container(
-              height: 78,
-              width: 71,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                color: Color(0XFFD9EBEB)
-              ),
-                child: UiHelper.CustomImage(img: grocerykitchen[index]["img"].toString()),
-            );
-          })
+          Expanded(
+            child: ListView.builder(itemBuilder: (context,index){
+              return Container(
+                height: 78,
+                width: 71,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: Color(0XFFD9EBEB)
+                ),
+                  child: UiHelper.CustomImage(img: grocerykitchen[index]["img"].toString()),
+              );
+            }, itemCount: grocerykitchen.length,),
+          )
         ],
       ),
     );
