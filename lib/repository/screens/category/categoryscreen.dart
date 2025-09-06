@@ -106,32 +106,38 @@ class CategoryScreen extends StatelessWidget {
           ),
           SizedBox(height: 20),
           Expanded(
-            child: ListView.builder(
-              itemBuilder: (context, index) {
-                return Column(
-                  children: [
-                    Container(
-                      height: 78,
-                      width: 71,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Color(0XFFD9EBEB),
+            child: Padding(
+              padding: const EdgeInsets.only(left: 20),
+              child: ListView.builder(
+                itemBuilder: (context, index) {
+                  return Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(4.0),
+                        child: Container(
+                          height: 78,
+                          width: 71,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: Color(0XFFD9EBEB),
+                          ),
+                          child: UiHelper.CustomImage(
+                            img: grocerykitchen[index]["img"].toString(),
+                          ),
+                        ),
                       ),
-                      child: UiHelper.CustomImage(
-                        img: grocerykitchen[index]["img"].toString(),
+                      UiHelper.CustomText(
+                        text: grocerykitchen[index]["text"].toString(),
+                        color: Colors.black,
+                        fontweight: FontWeight.normal,
+                        fontsize: 10,
                       ),
-                    ),
-                    UiHelper.CustomText(
-                      text: grocerykitchen[index]["text"].toString(),
-                      color: Colors.black,
-                      fontweight: FontWeight.normal,
-                      fontsize: 10,
-                    ),
-                  ],
-                );
-              },
-              itemCount: grocerykitchen.length,
-              scrollDirection: Axis.horizontal,
+                    ],
+                  );
+                },
+                itemCount: grocerykitchen.length,
+                scrollDirection: Axis.horizontal,
+              ),
             ),
           ),
         ],
