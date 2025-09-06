@@ -7,6 +7,7 @@ class PrintScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(value),
       body: Column(
         children: [
           SizedBox(height: 40),
@@ -98,6 +99,29 @@ class PrintScreen extends StatelessWidget {
             fontweight: FontWeight.bold,
             fontsize: 14,
             fontfamily: "bold",
+          ),
+          SizedBox(height: 40),
+          Container(
+            height: 163,
+            width: 361,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(5),
+              color: Colors.white,
+            ),
+            child: Column(children: [
+                Row(children: [
+                    SizedBox(width: 20),
+                    UiHelper.CustomText(
+                      text: "Documents",
+                      color: Color(0XFF000000),
+                      fontweight: FontWeight.bold,
+                      fontsize: 14,
+                      fontfamily: "bold",
+                    ),
+                  ]
+                ),
+              ],
+            ),
           ),
         ],
       ),
