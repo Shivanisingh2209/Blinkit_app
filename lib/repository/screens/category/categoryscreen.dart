@@ -22,7 +22,7 @@ class CategoryScreen extends StatelessWidget {
     },
     {
       "img": "bourbon.png",
-      "text": "Biscuit & \nBakery",
+      "text": "Biscuits & \nBakery",
     }
   ];
 
@@ -119,6 +119,18 @@ class CategoryScreen extends StatelessWidget {
               ),
             ],
           ),
+          SizedBox(height: 20),
+          ListView.builder(itemBuilder: (context,index){
+            return Container(
+              height: 78,
+              width: 71,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: Color(0XFFD9EBEB)
+              ),
+                child: UiHelper.CustomImage(img: grocerykitchen[index]["img"].toString()),
+            );
+          })
         ],
       ),
     );
