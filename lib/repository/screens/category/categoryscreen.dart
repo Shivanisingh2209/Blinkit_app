@@ -4,26 +4,11 @@ import 'package:flutter/material.dart';
 class CategoryScreen extends StatelessWidget {
   TextEditingController searchController = TextEditingController();
   var grocerykitchen = [
-    {
-      "img": "vegies.png",
-      "text": "Vegetable & \nFruits",
-    },
-    {
-      "img": "atta.png",
-      "text": "Atta, Dal & \nRice",
-    },
-    {
-      "img": "oil.png",
-      "text": "Oil, Ghee & \nMasala",
-    },
-    {
-      "img": "bread.png",
-      "text": "Dairy, bread & \nMilk",
-    },
-    {
-      "img": "bourbon.png",
-      "text": "Biscuits & \nBakery",
-    }
+    {"img": "vegies.png", "text": "Vegetable & \nFruits"},
+    {"img": "atta.png", "text": "Atta, Dal & \nRice"},
+    {"img": "oil.png", "text": "Oil, Ghee & \nMasala"},
+    {"img": "bread.png", "text": "Dairy, bread & \nMilk"},
+    {"img": "bourbon.png", "text": "Biscuits & \nBakery"},
   ];
 
   @override
@@ -121,18 +106,34 @@ class CategoryScreen extends StatelessWidget {
           ),
           SizedBox(height: 20),
           Expanded(
-            child: ListView.builder(itemBuilder: (context,index){
-              return Container(
-                height: 78,
-                width: 71,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Color(0XFFD9EBEB)
-                ),
-                  child: UiHelper.CustomImage(img: grocerykitchen[index]["img"].toString()),
-              );
-            }, itemCount: grocerykitchen.length,),
-          )
+            child: ListView.builder(
+              itemBuilder: (context, index) {
+                return Column(
+                  children: [
+                    Container(
+                      height: 78,
+                      width: 71,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Color(0XFFD9EBEB),
+                      ),
+                      child: UiHelper.CustomImage(
+                        img: grocerykitchen[index]["img"].toString(),
+                      ),
+                    ),
+                    UiHelper.CustomText(
+                      text: grocerykitchen[index]["text"].toString(),
+                      color: Colors.black,
+                      fontweight: FontWeight.normal,
+                      fontsize: 10,
+                    ),
+                  ],
+                );
+              },
+              itemCount: grocerykitchen.length,
+              scrollDirection: Axis.horizontal,
+            ),
+          ),
         ],
       ),
     );
