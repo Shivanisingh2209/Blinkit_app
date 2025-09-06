@@ -1,12 +1,93 @@
+import 'package:blinkit_app/repository/widgets/uihelper.dart';
 import 'package:flutter/material.dart';
 
 class CategoryScreen extends StatelessWidget {
-  const CategoryScreen({super.key});
+  TextEditingController searchController = TextEditingController();
+
+  CategoryScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
+      body: Column(
+        children: [
+          SizedBox(height: 30),
+          Stack(
+            children: [
+              Container(
+                height: 190,
+                width: double.infinity,
+                color: Color(0XFFF7CB45),
+                child: Column(
+                  children: [
+                    SizedBox(height: 30),
+                    Row(
+                      children: [
+                        SizedBox(width: 10),
+                        UiHelper.CustomText(
+                          text: "Blinkit in",
+                          color: Color(0XFF000000),
+                          fontsize: 14,
+                          fontweight: FontWeight.bold,
+                          fontfamily: "bold",
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        SizedBox(width: 10),
+                        UiHelper.CustomText(
+                          text: "16 minutes",
+                          color: Color(0XFF000000),
+                          fontsize: 20,
+                          fontweight: FontWeight.bold,
+                          fontfamily: "bold",
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        SizedBox(width: 10),
+                        UiHelper.CustomText(
+                          text: "HOME",
+                          color: Color(0XFF000000),
+                          fontweight: FontWeight.bold,
+                          fontsize: 14,
+                          fontfamily: "bold",
+                        ),
+                        UiHelper.CustomText(
+                          text: "- Shivani Singh, Varanasi, Uttar Pradesh",
+                          color: Color(0XFF000000),
+                          fontweight: FontWeight.normal,
+                          fontsize: 14,
+                          fontfamily: "regular",
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              Positioned(
+                right: 10,
+                bottom: 100,
+                child: CircleAvatar(
+                  radius: 20,
+                  backgroundColor: Colors.white,
+                  child: Icon(Icons.person, color: Colors.black, size: 20),
+                ),
+              ),
+              Positioned(
+                left: 20,
+                bottom: 30,
+                child: UiHelper.CustomTextField(
+                  controller: searchController,
+                  hintText: '',
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }
