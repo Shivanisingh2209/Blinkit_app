@@ -2,6 +2,8 @@ import 'package:blinkit_app/repository/widgets/uihelper.dart';
 import 'package:flutter/material.dart';
 
 class CategoryScreen extends StatelessWidget {
+  CategoryScreen({super.key});
+
   TextEditingController searchController = TextEditingController();
   var grocerykitchen = [
     {"img": "vegies.png", "text": "Vegetable & \n Fruits"},
@@ -15,7 +17,7 @@ class CategoryScreen extends StatelessWidget {
     {"img": "cereals.png", "text": "Dry Fruits & \n Cereals"},
     {"img": "appliances.png", "text": "Kitchen & \n Appliances"},
     {"img": "tea.png", "text": "Tea & \n Coffees"},
-    {"img": "icecream.png", "text": "Ice Creams & \n much more"},
+    {"img": "icecream1.png", "text": "Ice Creams & \n much more"},
     {"img": "maggie.png", "text": "Noodles & \n Packet Food"},
   ];
 
@@ -144,6 +146,42 @@ class CategoryScreen extends StatelessWidget {
                   );
                 },
                 itemCount: grocerykitchen.length,
+                scrollDirection: Axis.horizontal,
+              ),
+            ),
+          ),
+          SizedBox(height: 20),
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.only(left: 20),
+              child: ListView.builder(
+                itemBuilder: (context, index) {
+                  return Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(5.0),
+                        child: Container(
+                          height: 78,
+                          width: 71,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: Color(0XFFD9EBEB),
+                          ),
+                          child: UiHelper.CustomImage(
+                            img: secondgrocerykitchen[index]["img"].toString(),
+                          ),
+                        ),
+                      ),
+                      UiHelper.CustomText(
+                        text: secondgrocerykitchen[index]["text"].toString(),
+                        color: Colors.black,
+                        fontweight: FontWeight.normal,
+                        fontsize: 10,
+                      ),
+                    ],
+                  );
+                },
+                itemCount: secondgrocerykitchen.length,
                 scrollDirection: Axis.horizontal,
               ),
             ),
