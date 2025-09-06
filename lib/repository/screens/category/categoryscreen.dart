@@ -4,14 +4,12 @@ import 'package:flutter/material.dart';
 class CategoryScreen extends StatelessWidget {
   TextEditingController searchController = TextEditingController();
 
-  CategoryScreen({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
         children: [
-          SizedBox(height: 30),
+          SizedBox(height: 40),
           Stack(
             children: [
               Container(
@@ -85,6 +83,14 @@ class CategoryScreen extends StatelessWidget {
                 ),
               ),
             ],
+          ),
+          SizedBox(height: 20),
+          UiHelper.CustomText(
+            text: "Grocery & Kitchen",
+            color: Colors.black,
+            fontweight: FontWeight.bold,
+            fontsize: 14,
+            fontfamily: "bold",
           ),
         ],
       ),
