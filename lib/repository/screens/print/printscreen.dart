@@ -92,6 +92,13 @@ class PrintScreen extends StatelessWidget {
             fontsize: 32,
             fontfamily: "bold",
           ),
+          UiHelper.CustomText(
+            text: "Blinkit ensures secure prints at every stage",
+            color: Color(0XFF9C9C9C),
+            fontweight: FontWeight.bold,
+            fontsize: 14,
+            fontfamily: "bold",
+          ),
         ],
       ),
     );
