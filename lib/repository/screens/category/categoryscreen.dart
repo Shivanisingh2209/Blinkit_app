@@ -3,6 +3,15 @@ import 'package:flutter/material.dart';
 
 class CategoryScreen extends StatelessWidget {
   TextEditingController searchController = TextEditingController();
+  var grocerykitchen = [
+    {
+      "img": "grocery.png",
+      "img": "atta.png",
+      "img": "oil.png",
+      "img": "bread.png",
+      "img": "bourbon.png"
+    }
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -84,13 +93,18 @@ class CategoryScreen extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(height: 20),
-          UiHelper.CustomText(
-            text: "Grocery & Kitchen",
-            color: Colors.black,
-            fontweight: FontWeight.bold,
-            fontsize: 14,
-            fontfamily: "bold",
+          SizedBox(height: 30),
+          Row(
+            children: [
+              SizedBox(height: 20),
+              UiHelper.CustomText(
+                text: "Grocery & Kitchen",
+                color: Colors.black,
+                fontweight: FontWeight.bold,
+                fontsize: 14,
+                fontfamily: "bold",
+              ),
+            ],
           ),
         ],
       ),
