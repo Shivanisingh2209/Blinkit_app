@@ -15,7 +15,7 @@ class LoginScreen extends StatelessWidget {
             child: Column(
               children: [
                 UiHelper.CustomImage(img: "Blinkit Onboarding Screen.png"),
-                SizedBox(height: 5),
+                SizedBox(height: 15),
                 UiHelper.CustomImage(img: "image 10.png"),
                 SizedBox(height: 4),
                 UiHelper.CustomText(
@@ -25,7 +25,7 @@ class LoginScreen extends StatelessWidget {
                   fontsize: 20,
                   fontfamily: "bold",
                 ),
-                SizedBox(height: 4),
+                SizedBox(height: 15),
                 Card(
                   elevation: 4,
                   shape: RoundedRectangleBorder(
@@ -40,21 +40,21 @@ class LoginScreen extends StatelessWidget {
                     ),
                     child: Column(
                       children: [
-                        SizedBox(height: 4),
+                        SizedBox(height: 10),
                         UiHelper.CustomText(
                           text: "Shivani",
                           color: Color(0XFF000000),
                           fontweight: FontWeight.w500,
                           fontsize: 14,
                         ),
-                        SizedBox(height: 4),
+                        SizedBox(height: 10),
                         UiHelper.CustomText(
                           text: "7827XXXXXX",
                           color: Color(0XFF9C9C9C),
                           fontweight: FontWeight.bold,
                           fontsize: 14,
                         ),
-                        SizedBox(height: 4),
+                        SizedBox(height: 10),
                         SizedBox(
                           height: 48,
                           width: 295,
@@ -83,13 +83,13 @@ class LoginScreen extends StatelessWidget {
                                   fontsize: 14,
                                   fontfamily: "bold",
                                 ),
-                                SizedBox(width: 5),
+                                SizedBox(width: 25),
                                 UiHelper.CustomImage(img: "image 9.png"),
                               ],
                             ),
                           ),
                         ),
-                        SizedBox(height: 4),
+                        SizedBox(height: 10),
                         UiHelper.CustomText(
                           text:
                               "Access your saved addresses from Zomato automatically!",
@@ -98,7 +98,7 @@ class LoginScreen extends StatelessWidget {
                           fontsize: 10,
                           fontfamily: "regular",
                         ),
-                        SizedBox(height: 4),
+                        SizedBox(height: 10),
                         UiHelper.CustomText(
                           text: "or login with phone number",
                           color: Color(0XFF269237),

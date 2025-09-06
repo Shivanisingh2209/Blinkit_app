@@ -17,7 +17,15 @@ class CategoryScreen extends StatelessWidget {
     {"img": "cereals.png", "text": "Dry Fruits & \n Cereals"},
     {"img": "appliances.png", "text": "Kitchen & \n Appliances"},
     {"img": "tea.png", "text": "Tea & \n Coffees"},
-    {"img": "icecream1.png", "text": "Ice Creams & \n much more"},
+    {"img": "icecream.png", "text": "Ice Creams & \n much more"},
+    {"img": "maggie.png", "text": "Noodles & \n Packet Food"},
+  ];
+
+  var snacksdrinks = [
+    {"img": "cereals.png", "text": "Dry Fruits & \n Cereals"},
+    {"img": "appliances.png", "text": "Kitchen & \n Appliances"},
+    {"img": "tea.png", "text": "Tea & \n Coffees"},
+    {"img": "icecream.png", "text": "Ice Creams & \n much more"},
     {"img": "maggie.png", "text": "Noodles & \n Packet Food"},
   ];
 
@@ -150,8 +158,8 @@ class CategoryScreen extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 20),
           Expanded(
+            flex: 3,
             child: Padding(
               padding: const EdgeInsets.only(left: 20),
               child: ListView.builder(
@@ -186,6 +194,12 @@ class CategoryScreen extends StatelessWidget {
               ),
             ),
           ),
+          Row(
+            children: [
+              SizedBox(width: 20,),
+              UiHelper.CustomText(text: "Snacks & Drinks", color: Color(0XFF000000), fontweight: FontWeight.bold, fontsize: 14, fontfamily: "bold"),
+            ],
+          )
         ],
       ),
     );
