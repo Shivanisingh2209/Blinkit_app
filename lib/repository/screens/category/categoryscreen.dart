@@ -22,11 +22,11 @@ class CategoryScreen extends StatelessWidget {
   ];
 
   var snacksdrinks = [
-    {"img": "cereals.png", "text": "Dry Fruits & \n Cereals"},
-    {"img": "appliances.png", "text": "Kitchen & \n Appliances"},
-    {"img": "tea.png", "text": "Tea & \n Coffees"},
-    {"img": "icecream.png", "text": "Ice Creams & \n much more"},
-    {"img": "maggie.png", "text": "Noodles & \n Packet Food"},
+    {"img": "chips.png", "text": "Chips & \n Namkeens"},
+    {"img": "sweets.png", "text": "Sweets & \n Chocolates"},
+    {"img": "drinks.png", "text": "Drinks & \n Juices"},
+    {"img": "sauces.png", "text": "Sauces & \n Spreads"},
+    {"img": "beauty.png", "text": "Beauty &\n Cosmetics"},
   ];
 
   @override
@@ -124,6 +124,7 @@ class CategoryScreen extends StatelessWidget {
           ),
           SizedBox(height: 20),
           Expanded(
+            flex: 3,
             child: Padding(
               padding: const EdgeInsets.only(left: 20),
               child: ListView.builder(
@@ -159,7 +160,7 @@ class CategoryScreen extends StatelessWidget {
             ),
           ),
           Expanded(
-            flex: 3,
+            flex: 4,
             child: Padding(
               padding: const EdgeInsets.only(left: 20),
               child: ListView.builder(
@@ -196,10 +197,52 @@ class CategoryScreen extends StatelessWidget {
           ),
           Row(
             children: [
-              SizedBox(width: 20,),
-              UiHelper.CustomText(text: "Snacks & Drinks", color: Color(0XFF000000), fontweight: FontWeight.bold, fontsize: 14, fontfamily: "bold"),
+              SizedBox(width: 20),
+              UiHelper.CustomText(
+                text: "Snacks & Drinks",
+                color: Color(0XFF000000),
+                fontweight: FontWeight.bold,
+                fontsize: 14,
+                fontfamily: "bold",
+              ),
             ],
-          )
+          ),
+          Expanded(
+            flex: 6,
+            child: Padding(
+              padding: const EdgeInsets.only(left: 20),
+              child: ListView.builder(
+                itemBuilder: (context, index) {
+                  return Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(5.0),
+                        child: Container(
+                          height: 78,
+                          width: 71,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: Color(0XFFD9EBEB),
+                          ),
+                          child: UiHelper.CustomImage(
+                            img: snacksdrinks[index]["img"].toString(),
+                          ),
+                        ),
+                      ),
+                      UiHelper.CustomText(
+                        text: snacksdrinks[index]["text"].toString(),
+                        color: Colors.black,
+                        fontweight: FontWeight.normal,
+                        fontsize: 10,
+                      ),
+                    ],
+                  );
+                },
+                itemCount: snacksdrinks.length,
+                scrollDirection: Axis.horizontal,
+              ),
+            ),
+          ),
         ],
       ),
     );
