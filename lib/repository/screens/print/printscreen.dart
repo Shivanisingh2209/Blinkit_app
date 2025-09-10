@@ -108,9 +108,11 @@ class PrintScreen extends StatelessWidget {
               borderRadius: BorderRadius.circular(5),
               color: Colors.white,
             ),
-            child: Column(children: [
-              SizedBox(height: 20),
-                Row(children: [
+            child: Column(
+              children: [
+                SizedBox(height: 20),
+                Row(
+                  children: [
                     SizedBox(width: 20),
                     UiHelper.CustomText(
                       text: "Documents",
@@ -119,13 +121,22 @@ class PrintScreen extends StatelessWidget {
                       fontsize: 16,
                       fontfamily: "bold",
                     ),
-                  ]
+                  ],
                 ),
-              SizedBox(height: 10,),
-              Row(children: [
-                SizedBox(width: 20),
-                UiHelper.CustomImage(img: "✦.png")
-              ],)
+                SizedBox(height: 10),
+                Row(
+                  children: [
+                    SizedBox(width: 20),
+                    UiHelper.CustomImage(img: "✦.png"),
+                    UiHelper.CustomText(
+                      text: " Price starting at rs 3/page",
+                      color: Color(0XFF9C9C9C),
+                      fontweight: FontWeight.w400,
+                      fontsize: 14,
+                      fontfamily: "regular",
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
