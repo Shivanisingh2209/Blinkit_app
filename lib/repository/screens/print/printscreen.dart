@@ -165,6 +165,27 @@ class PrintScreen extends StatelessWidget {
                     ),
                   ],
                 ),
+                SizedBox(height: 10,),
+                Row(
+                  children: [
+                    SizedBox(width: 20,),
+                    SizedBox(
+                      height: 40,
+                      width: 125,
+                      child: ElevatedButton(
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                              backgroundColor: Color(0XFF27AF34),
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(5))),
+                          child: Text(
+                            "Upload Files",
+                            style: TextStyle(
+                                fontSize: 13, color: Colors.white),
+                          )),
+                    )
+                  ],
+                ),
               ],
             ),
           ),
