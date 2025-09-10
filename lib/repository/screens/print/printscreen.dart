@@ -101,93 +101,107 @@ class PrintScreen extends StatelessWidget {
             fontfamily: "bold",
           ),
           SizedBox(height: 40),
-          Container(
-            height: 183,
-            width: 391,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(5),
-              color: Colors.white,
-            ),
-            child: Column(
-              children: [
-                SizedBox(height: 20),
-                Row(
-                  children: [
-                    SizedBox(width: 20),
-                    UiHelper.CustomText(
-                      text: "Documents",
-                      color: Color(0XFF000000),
-                      fontweight: FontWeight.bold,
-                      fontsize: 16,
-                      fontfamily: "bold",
-                    ),
-                  ],
+          Stack(
+            children: [
+              Container(
+                height: 183,
+                width: 391,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(5),
+                  color: Colors.white,
                 ),
-                SizedBox(height: 10),
-                Row(
+                child: Column(
                   children: [
-                    SizedBox(width: 20),
-                    UiHelper.CustomImage(img: "✦.png"),
-                    UiHelper.CustomText(
-                      text: " Price starting at rs 3/page",
-                      color: Color(0XFF9C9C9C),
-                      fontweight: FontWeight.w400,
-                      fontsize: 14,
-                      fontfamily: "regular",
+                    SizedBox(height: 20),
+                    Row(
+                      children: [
+                        SizedBox(width: 20),
+                        UiHelper.CustomText(
+                          text: "Documents",
+                          color: Color(0XFF000000),
+                          fontweight: FontWeight.bold,
+                          fontsize: 16,
+                          fontfamily: "bold",
+                        ),
+                      ],
                     ),
-                  ],
-                ),
-                SizedBox(height: 2),
-                Row(
-                  children: [
-                    SizedBox(width: 20),
-                    UiHelper.CustomImage(img: "✦.png"),
-                    UiHelper.CustomText(
-                      text: " Paper quality: 70 GSM",
-                      color: Color(0XFF9C9C9C),
-                      fontweight: FontWeight.w400,
-                      fontsize: 14,
-                      fontfamily: "regular",
+                    SizedBox(height: 10),
+                    Row(
+                      children: [
+                        SizedBox(width: 20),
+                        UiHelper.CustomImage(img: "✦.png"),
+                        UiHelper.CustomText(
+                          text: " Price starting at rs 3/page",
+                          color: Color(0XFF9C9C9C),
+                          fontweight: FontWeight.w400,
+                          fontsize: 14,
+                          fontfamily: "regular",
+                        ),
+                      ],
                     ),
-                  ],
-                ),
-                SizedBox(height: 2),
-                Row(
-                  children: [
-                    SizedBox(width: 20),
-                    UiHelper.CustomImage(img: "✦.png"),
-                    UiHelper.CustomText(
-                      text: " Single side prints",
-                      color: Color(0XFF9C9C9C),
-                      fontweight: FontWeight.w400,
-                      fontsize: 14,
-                      fontfamily: "regular",
+                    SizedBox(height: 2),
+                    Row(
+                      children: [
+                        SizedBox(width: 20),
+                        UiHelper.CustomImage(img: "✦.png"),
+                        UiHelper.CustomText(
+                          text: " Paper quality: 70 GSM",
+                          color: Color(0XFF9C9C9C),
+                          fontweight: FontWeight.w400,
+                          fontsize: 14,
+                          fontfamily: "regular",
+                        ),
+                      ],
                     ),
-                  ],
-                ),
-                SizedBox(height: 10,),
-                Row(
-                  children: [
-                    SizedBox(width: 20,),
-                    SizedBox(
-                      height: 40,
-                      width: 125,
-                      child: ElevatedButton(
-                          onPressed: () {},
-                          style: ElevatedButton.styleFrom(
+                    SizedBox(height: 2),
+                    Row(
+                      children: [
+                        SizedBox(width: 20),
+                        UiHelper.CustomImage(img: "✦.png"),
+                        UiHelper.CustomText(
+                          text: " Single side prints",
+                          color: Color(0XFF9C9C9C),
+                          fontweight: FontWeight.w400,
+                          fontsize: 14,
+                          fontfamily: "regular",
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 10),
+                    Row(
+                      children: [
+                        SizedBox(width: 20),
+                        SizedBox(
+                          height: 40,
+                          width: 125,
+                          child: ElevatedButton(
+                            onPressed: () {},
+                            style: ElevatedButton.styleFrom(
                               backgroundColor: Color(0XFF27AF34),
                               shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(5))),
-                          child: Text(
-                            "Upload Files",
-                            style: TextStyle(
-                                fontSize: 13, color: Colors.white),
-                          )),
-                    )
+                                borderRadius: BorderRadius.circular(5),
+                              ),
+                            ),
+                            child: Text(
+                              "Upload Files",
+                              style: TextStyle(
+                                fontSize: 13,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ],
                 ),
-              ],
-            ),
+              ),
+              Positioned(
+                child: UiHelper.CustomImage(img: "doc.png"),
+                right: 20,
+                bottom: 40,
+              ),
+            ],
           ),
         ],
       ),
