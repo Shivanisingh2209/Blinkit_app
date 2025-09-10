@@ -137,6 +137,34 @@ class PrintScreen extends StatelessWidget {
                     ),
                   ],
                 ),
+                SizedBox(height: 2),
+                Row(
+                  children: [
+                    SizedBox(width: 20),
+                    UiHelper.CustomImage(img: "✦.png"),
+                    UiHelper.CustomText(
+                      text: " Paper quality: 70 GSM",
+                      color: Color(0XFF9C9C9C),
+                      fontweight: FontWeight.w400,
+                      fontsize: 14,
+                      fontfamily: "regular",
+                    ),
+                  ],
+                ),
+                SizedBox(height: 2),
+                Row(
+                  children: [
+                    SizedBox(width: 20),
+                    UiHelper.CustomImage(img: "✦.png"),
+                    UiHelper.CustomText(
+                      text: " Single side prints",
+                      color: Color(0XFF9C9C9C),
+                      fontweight: FontWeight.w400,
+                      fontsize: 14,
+                      fontfamily: "regular",
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
