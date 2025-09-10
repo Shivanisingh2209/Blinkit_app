@@ -102,8 +102,8 @@ class PrintScreen extends StatelessWidget {
           ),
           SizedBox(height: 40),
           Container(
-            height: 163,
-            width: 361,
+            height: 183,
+            width: 391,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(5),
               color: Colors.white,
