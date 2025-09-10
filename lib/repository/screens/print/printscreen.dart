@@ -7,7 +7,7 @@ class PrintScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(value),
+      backgroundColor: Color(0XFFFBF0CE),
       body: Column(
         children: [
           SizedBox(height: 40),
