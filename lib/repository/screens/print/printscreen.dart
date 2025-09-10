@@ -109,17 +109,23 @@ class PrintScreen extends StatelessWidget {
               color: Colors.white,
             ),
             child: Column(children: [
+              SizedBox(height: 20),
                 Row(children: [
                     SizedBox(width: 20),
                     UiHelper.CustomText(
                       text: "Documents",
                       color: Color(0XFF000000),
                       fontweight: FontWeight.bold,
-                      fontsize: 14,
+                      fontsize: 16,
                       fontfamily: "bold",
                     ),
                   ]
                 ),
+              SizedBox(height: 10,),
+              Row(children: [
+                SizedBox(width: 20),
+                UiHelper.CustomImage(img: "✦.png")
+              ],)
               ],
             ),
           ),
