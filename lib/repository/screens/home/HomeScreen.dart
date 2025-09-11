@@ -4,6 +4,25 @@ import 'package:flutter/material.dart';
 class HomeScreen extends StatelessWidget {
   TextEditingController searchController = TextEditingController();
 
+  var data = [
+    {
+      "img": "candles.png",
+      "text": "Lights, Diyas \n & Candles",
+    },
+    {
+      "img": "image_51.png",
+      "text": "Diwali \n Gifts",
+    },
+    {
+      "img": "gadgets.png",
+      "text": "Appliances \n & Gadgets",
+    },
+    {
+      "img": "furnitures.png",
+      "text": "Home \n & Living",
+    }
+  ];
+
   HomeScreen({super.key});
 
   @override
@@ -91,16 +110,33 @@ class HomeScreen extends StatelessWidget {
             height: 196,
             width: double.infinity,
             color: Color(0XFFEC0505),
-            child: Row(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                UiHelper.CustomImage(img: "sparkle.png"),
-                UiHelper.CustomText(
-                  text: "Mega Diwali Sale",
-                  color: Color(0XFFFFFFFF),
-                  fontweight: FontWeight.bold,
-                  fontsize: 20,
-                  fontfamily: "bold",
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    UiHelper.CustomImage(img: "sparkle.png"),
+                    UiHelper.CustomImage(img: "img_55.png"),
+                    UiHelper.CustomText(
+                      text: "Mega Diwali Sale",
+                      color: Color(0XFFFFFFFF),
+                      fontweight: FontWeight.bold,
+                      fontsize: 20,
+                      fontfamily: "bold",
+                    ),
+                    UiHelper.CustomImage(img: "img_55.png"),
+                    UiHelper.CustomImage(img: "sparkle.png")
+                  ],
                 ),
+                Container(
+                  height: 108,
+                  width: 86,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Color(0XFFEAD3D3),
+                  ),
+                )
               ],
             ),
           ),
