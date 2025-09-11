@@ -5,21 +5,16 @@ class HomeScreen extends StatelessWidget {
   TextEditingController searchController = TextEditingController();
 
   var data = [
+    {"img": "candles.png", "text": "Lights, Diyas \n & Candles"},
+    {"img": "image_51.png", "text": "Diwali \n Gifts"},
+    {"img": "gadgets.png", "text": "Appliances \n & Gadgets"},
+    {"img": "furnitures.png", "text": "Home \n & Living"},
+  ];
+
+  var category = [
     {
-      "img": "candles.png",
-      "text": "Lights, Diyas \n & Candles",
-    },
-    {
-      "img": "image_51.png",
-      "text": "Diwali \n Gifts",
-    },
-    {
-      "img": "gadgets.png",
-      "text": "Appliances \n & Gadgets",
-    },
-    {
-      "img": "furnitures.png",
-      "text": "Home \n & Living",
+      "img": "",
+      "text": "Golden Glass \n Wooden Lid Candle (Oudh)",
     }
   ];
 
@@ -126,17 +121,52 @@ class HomeScreen extends StatelessWidget {
                       fontfamily: "bold",
                     ),
                     UiHelper.CustomImage(img: "img_55.png"),
-                    UiHelper.CustomImage(img: "sparkle.png")
+                    UiHelper.CustomImage(img: "sparkle.png"),
                   ],
                 ),
-                Container(
-                  height: 108,
-                  width: 86,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Color(0XFFEAD3D3),
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: ListView.builder(
+                      itemBuilder: (context, index) {
+                        return Padding(
+                          padding: const EdgeInsets.only(
+                            left: 8,
+                            right: 8,
+                            top: 2,
+                            bottom: 1,
+                          ),
+                          child: Container(
+                            height: 108,
+                            width: 93,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Color(0XFFEAD3D3),
+                            ),
+                            child: Column(
+                              // mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                SizedBox(height: 8),
+                                UiHelper.CustomText(
+                                  text: data[index]["text"].toString(),
+                                  color: Colors.black,
+                                  fontweight: FontWeight.bold,
+                                  fontsize: 10,
+                                  fontfamily: "bold",
+                                ),
+                                UiHelper.CustomImage(
+                                  img: data[index]["img"].toString(),
+                                ),
+                              ],
+                            ),
+                          ),
+                        );
+                      },
+                      itemCount: data.length,
+                      scrollDirection: Axis.horizontal,
+                    ),
                   ),
-                )
+                ),
               ],
             ),
           ),
