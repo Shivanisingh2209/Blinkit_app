@@ -13,9 +13,17 @@ class HomeScreen extends StatelessWidget {
 
   var category = [
     {
-      "img": "",
+      "img": "img-54.png",
       "text": "Golden Glass \n Wooden Lid Candle (Oudh)",
-    }
+    },
+    {
+      "img": "img-57.png",
+      "text": "Royal Gulab Jamun \n By Bikano",
+    },
+    {
+      "img": "img-63.png",
+      "text": "Bikaji Bhujiya",
+    },
   ];
 
   HomeScreen({super.key});
@@ -170,6 +178,22 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
           ),
+          SizedBox(height: 20,),
+          ListView.builder(itemBuilder: (context, index){
+            return Column(
+              children: [
+                Container(
+                  clipBehavior: ,
+                  height: 108,
+                  width: 93,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: UiHelper.CustomImage(img: category[index]["img"].toString()),
+                )
+              ],
+            );
+          })
         ],
       ),
     );
