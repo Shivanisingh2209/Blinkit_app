@@ -12,18 +12,9 @@ class HomeScreen extends StatelessWidget {
   ];
 
   var category = [
-    {
-      "img": "img-54.png",
-      "text": "Golden Glass \n Wooden Lid Candle (Oudh)",
-    },
-    {
-      "img": "img-57.png",
-      "text": "Royal Gulab Jamun \n By Bikano",
-    },
-    {
-      "img": "img-63.png",
-      "text": "Bikaji Bhujiya",
-    },
+    {"img": "img-54.png", "text": "Golden Glass \n Wooden Lid Candle (Oudh)"},
+    {"img": "img-57.png", "text": "Royal Gulab Jamun \n By Bikano"},
+    {"img": "img-63.png", "text": "Bikaji Bhujiya"},
   ];
 
   HomeScreen({super.key});
@@ -178,22 +169,46 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: 20,),
-          ListView.builder(itemBuilder: (context, index){
-            return Column(
-              children: [
-                Container(
-                  clipBehavior: ,
-                  height: 108,
-                  width: 93,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: UiHelper.CustomImage(img: category[index]["img"].toString()),
-                )
-              ],
-            );
-          })
+          SizedBox(height: 20),
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ListView.builder(
+                itemBuilder: (context, index) {
+                  return Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Container(
+                          clipBehavior: Clip.antiAlias,
+                          height: 108,
+                          width: 93,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: UiHelper.CustomImage(
+                            img: category[index]["img"].toString(),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(left: 20),
+                        child: UiHelper.CustomText(
+                          text: category[index]["text"].toString(),
+                          color: Colors.black,
+                          fontweight: FontWeight.bold,
+                          fontsize: 9,
+                          fontfamily: "bold",
+                        ),
+                      ),
+                    ],
+                  );
+                },
+                itemCount: category.length,
+                scrollDirection: Axis.horizontal,
+              ),
+            ),
+          ),
         ],
       ),
     );
