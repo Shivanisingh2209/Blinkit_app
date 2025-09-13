@@ -201,6 +201,17 @@ class HomeScreen extends StatelessWidget {
                           fontfamily: "bold",
                         ),
                       ),
+                      SizedBox(height: 5,),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 20),
+                        child: Row(
+                          children: [
+                            UiHelper.CustomImage(img: "timer.png"),
+                            UiHelper.CustomText(text: "16 MINS", color: Color(0XFF9C9C9C), fontweight: FontWeight.normal, fontsize: 10, fontfamily: "regular"),
+                          ],
+                        ),
+                      ),
+
                     ],
                   );
                 },
