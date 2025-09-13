@@ -17,6 +17,14 @@ class HomeScreen extends StatelessWidget {
     {"img": "img-63.png", "text": "Bikaji Bhujiya\n Bhujia & Namkeens"},
   ];
 
+  var grocerykitchen = [
+    {"img": "vegies.png", "text": "Vegetable & \n Fruits"},
+    {"img": "atta.png", "text": "Atta, Dal & \n Rice"},
+    {"img": "oil.png", "text": "Oil, Ghee & \n Masala"},
+    {"img": "bread.png", "text": "Dairy, bread & \n Milk"},
+    {"img": "bourbon.png", "text": "Biscuits & \n Bakery"},
+  ];
+
   HomeScreen({super.key});
 
   @override
@@ -169,8 +177,9 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: 20),
+
           Expanded(
+            flex: 2,
             child: Padding(
               padding: const EdgeInsets.all(10.0),
               child: ListView.builder(
@@ -181,8 +190,8 @@ class HomeScreen extends StatelessWidget {
                         padding: const EdgeInsets.all(15.0),
                         child: Container(
                           clipBehavior: Clip.antiAlias,
-                          height: 108,
-                          width: 93,
+                          height: 128,
+                          width: 103,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                           ),
@@ -201,7 +210,7 @@ class HomeScreen extends StatelessWidget {
                           fontfamily: "bold",
                         ),
                       ),
-                      SizedBox(height: 5,),
+                      SizedBox(height: 10,),
                       Padding(
                         padding: const EdgeInsets.only(right: 40),
                         child: Row(
@@ -225,6 +234,55 @@ class HomeScreen extends StatelessWidget {
                   );
                 },
                 itemCount: category.length,
+                scrollDirection: Axis.horizontal,
+              ),
+            ),
+          ),
+          Row(
+            children: [
+              SizedBox(width: 20),
+              UiHelper.CustomText(
+                text: "Grocery & Kitchen",
+                color: Colors.black,
+                fontweight: FontWeight.bold,
+                fontsize: 14,
+                fontfamily: "bold",
+              ),
+            ],
+          ),
+          SizedBox(height: 20,),
+          Expanded(
+            flex: 1,
+            child: Padding(
+              padding: const EdgeInsets.only(left: 20),
+              child: ListView.builder(
+                itemBuilder: (context, index) {
+                  return Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(5.0),
+                        child: Container(
+                          height: 78,
+                          width: 71,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: Color(0XFFD9EBEB),
+                          ),
+                          child: UiHelper.CustomImage(
+                            img: grocerykitchen[index]["img"].toString(),
+                          ),
+                        ),
+                      ),
+                      UiHelper.CustomText(
+                        text: grocerykitchen[index]["text"].toString(),
+                        color: Colors.black,
+                        fontweight: FontWeight.normal,
+                        fontsize: 10,
+                      ),
+                    ],
+                  );
+                },
+                itemCount: grocerykitchen.length,
                 scrollDirection: Axis.horizontal,
               ),
             ),
