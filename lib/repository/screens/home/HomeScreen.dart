@@ -14,7 +14,7 @@ class HomeScreen extends StatelessWidget {
   var category = [
     {"img": "img-54.png", "text": "Golden Glass \n Wooden Lid Candle (Oudh)"},
     {"img": "img-57.png", "text": "Royal Gulab Jamun \n By Bikano"},
-    {"img": "img-63.png", "text": "Bikaji Bhujiya"},
+    {"img": "img-63.png", "text": "Bikaji Bhujiya\n Bhujia & Namkeens"},
   ];
 
   HomeScreen({super.key});
@@ -172,7 +172,7 @@ class HomeScreen extends StatelessWidget {
           SizedBox(height: 20),
           Expanded(
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(10.0),
               child: ListView.builder(
                 itemBuilder: (context, index) {
                   return Column(
@@ -203,7 +203,7 @@ class HomeScreen extends StatelessWidget {
                       ),
                       SizedBox(height: 5,),
                       Padding(
-                        padding: const EdgeInsets.only(right: 20),
+                        padding: const EdgeInsets.only(right: 40),
                         child: Row(
                           children: [
                             UiHelper.CustomImage(img: "timer.png"),
@@ -211,7 +211,16 @@ class HomeScreen extends StatelessWidget {
                           ],
                         ),
                       ),
-
+                      SizedBox(height: 5,),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 60),
+                        child: Row(
+                          children: [
+                            UiHelper.CustomImage(img: "rs.png"),
+                            UiHelper.CustomText(text: "79", color: Color(0XFF000000), fontweight: FontWeight.bold, fontsize: 15, fontfamily: "bold"),
+                          ],
+                        ),
+                      ),
                     ],
                   );
                 },
