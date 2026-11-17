@@ -48,7 +48,7 @@ class HomeScreen extends StatelessWidget {
                         UiHelper.CustomText(
                           text: "Blinkit in",
                           color: Color(0XFFFFFFFF),
-                          fontsize: 14,
+                          fontsize: 16,
                           fontweight: FontWeight.bold,
                           fontfamily: "bold",
                         ),
@@ -177,7 +177,6 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
           ),
-
           Expanded(
             flex: 2,
             child: Padding(
